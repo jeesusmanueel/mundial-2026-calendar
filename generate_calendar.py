@@ -154,7 +154,6 @@ UID:{uid}@mundial2026
 DTSTAMP:{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}
 DTSTART:{dtstart}
 SUMMARY:{summary}
-LOCATION:{venue}
 DESCRIPTION:{desc}
 END:VEVENT"""
 
