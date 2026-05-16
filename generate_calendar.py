@@ -180,6 +180,10 @@ if __name__ == "__main__":
     print("Obteniendo partidos...")
     matches = fetch_matches()
     print(f"Total partidos: {len(matches)}")
+    for m in matches[:6]:
+        home = m["homeTeam"].get("name", "")
+        away = m["awayTeam"].get("name", "")
+        print(f'"{home} vs {away}"')
     ics = generate_ics(matches)
     os.makedirs("docs", exist_ok=True)
     with open("docs/mundial2026.ics", "w", encoding="utf-8") as f:
